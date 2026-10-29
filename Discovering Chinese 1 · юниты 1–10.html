@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Discovering Chinese 1 · юниты 1–10</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fbf8f3;--fg:#2c2724;--cd:#fff;--mu:#8a7f76;--ac:#e0675d;--ok:#4fae7d;--no:#d9685e;--bd:#f0e6da}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1a18;--fg:#f1e9e0;--cd:#2a2522;--mu:#a79c92;--bd:#3a332e}}
+:root[data-theme="dark"]{--bg:#1d1a18;--fg:#f1e9e0;--cd:#2a2522;--mu:#a79c92;--bd:#3a332e}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:12px;max-width:760px;margin:auto}
+h1{font-size:1.35rem;margin:6px 4px 10px}h1 small{display:block;font-weight:400;color:var(--mu);font-size:.8rem}
+#nv{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+#nv button{flex:none;padding:12px 16px;border:0;border-radius:30px;background:var(--cd);color:var(--fg);font-size:1rem;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}#nv button.on{background:var(--ac);color:#fff}
+.hero{display:flex;gap:16px;align-items:center;border-radius:28px;padding:26px 22px;margin-bottom:14px;color:#2c2724;box-shadow:0 10px 30px rgba(0,0,0,.12)}.hero h2{margin:0;font-size:1.8rem}.hero p,.hero small{margin:2px 0 0;opacity:.7}.av{font-size:4.6rem;line-height:1;filter:drop-shadow(0 8px 10px rgba(0,0,0,.2))}
+.tk{background:var(--cd);border-radius:22px;padding:16px;margin-bottom:12px;box-shadow:0 4px 18px rgba(0,0,0,.07);border:2px solid transparent}.tk.ok{border-color:var(--ok)}
+.tk h3{margin:0 0 10px;font-size:1.05rem;display:flex;gap:10px;align-items:center}.tk h3 i{font-style:normal;background:var(--ac);color:#fff;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;font-size:.9rem}.tk.ok h3 i{background:var(--ok)}
+button{font-family:inherit}.op{display:grid;gap:8px}.op button,.tl{padding:12px;border:2px solid var(--bd);background:var(--cd);color:var(--fg);border-radius:16px;font-size:1.05rem;cursor:pointer;text-align:center}
+small{color:var(--mu);display:block;font-size:.75rem}.op button.ok,.tl.ok{background:var(--ok);border-color:var(--ok);color:#fff}.op button.ok small,.tl.ok small{color:#fff}.op button.no,.tl.no{background:var(--no);border-color:var(--no);color:#fff}.tl.sel{border-color:var(--ac)}
+.sl,.bk{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.sl .tl{min-width:56px;min-height:52px;font-size:1.3rem;background:rgba(224,103,93,.1)}.bk .tl{font-size:1.3rem}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pr2 div{display:grid;gap:8px;align-content:start}.w{font-size:.95rem!important}
+.big{font-size:1.6rem;margin:6px 0}.pl{border:0;background:var(--ac);color:#fff;border-radius:20px;padding:8px 14px;cursor:pointer;margin:0 4px 8px 0}.fb{color:var(--mu);margin:6px 0 0}
+.ctl{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}.go{border:0;background:var(--ac);color:#fff;border-radius:30px;padding:10px 18px;font-size:1rem;cursor:pointer}
+.ln{padding:8px 0;border-top:1px solid var(--bd)}.ln b{color:var(--ac);font-size:.85rem}.zh{font-size:1.6rem;line-height:2.1}.zh ruby{cursor:pointer;margin-right:2px}rt{font-size:.5em;color:var(--ac)}.nopy rt{display:none}.ru{color:var(--mu)}.notr .ru{display:none}
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}.au{background:var(--cd);border-radius:16px;padding:10px;box-shadow:0 2px 10px rgba(0,0,0,.07)}.au b{display:block;color:var(--ac)}.rv{margin-top:6px;font-size:1.1rem}.mu{color:var(--mu)}
+.ft{text-align:center;color:var(--mu);font-size:.85rem;margin:28px 0 14px;padding-top:14px;border-top:1px solid var(--bd)}
+</style></head><body>
+<h1>Discovering Chinese 奇妙中文<small>По темам учебника Discovering Chinese (Better Chinese), том 1 · юниты 1–10 · 5 заданий в каждом</small></h1>
+<div id="nv"></div><div id="pg"></div><footer class="ft">© Разработка Екатерины Полковой<br>Все права защищены</footer>
+<script>
+const U=[
+["Привет","👋","#ffe3d6,#ffc2a8","Лили/Мин",`你nǐ 好hǎo|Привет!
+老师lǎoshī 好hǎo|Здравствуйте, учитель!
+大家dàjiā 好hǎo|Всем привет!
+我wǒ 很hěn 好hǎo|У меня всё хорошо.
+明天míngtiān 见jiàn|До завтра!`],
+["Имя","🪪","#dff3ea,#a8dcc6","Мин/Анна",`你nǐ 叫jiào 什么shénme 名字míngzi|Как тебя зовут?
+我wǒ 叫jiào 李明Lǐmíng|Меня зовут Ли Мин.
+他tā 叫jiào 王刚Wánggāng|Его зовут Ван Ган.
+她tā 叫jiào 什么shénme 名字míngzi|Как её зовут?
+很hěn 高兴gāoxìng 认识rènshi 你nǐ|Рад с тобой познакомиться.`],
+["Возраст","🎂","#fff1c9,#ffd77a","Анна/Ван",`你nǐ 多duō 大dà|Сколько тебе лет?
+我wǒ 十五shíwǔ 岁suì|Мне пятнадцать лет.
+他tā 十六shíliù 岁suì|Ему шестнадцать лет.
+她tā 今年jīnnián 十七shíqī 岁suì|Ей в этом году семнадцать.
+我wǒ 今年jīnnián 十四shísì 岁suì|Мне в этом году четырнадцать.`],
+["Страна","🌍","#dbe9fb,#a9c8f2","Ван/Лена",`你nǐ 是shì 哪nǎ 国guó 人rén|Ты из какой страны?
+我wǒ 是shì 中国Zhōngguó 人rén|Я китаец (из Китая).
+她tā 是shì 美国Měiguó 人rén|Она американка.
+他tā 不bú 是shì 日本Rìběn 人rén|Он не японец.
+我们wǒmen 是shì 俄罗斯Éluósī 人rén|Мы русские.`],
+["Школа","🏫","#ece0f7,#cfb4ea","Саша/Мэй",`我wǒ 上shàng 大华Dàhuá 高中gāozhōng|Я учусь в старшей школе Дахуа.
+你nǐ 上shàng 哪nǎ 个ge 学校xuéxiào|В какой школе ты учишься?
+我wǒ 是shì 学生xuésheng|Я ученик.
+他tā 是shì 老师lǎoshī|Он учитель.
+我们wǒmen 在zài 学校xuéxiào|Мы в школе.`],
+["Семья","👨‍👩‍👧‍👦","#ffe0e6,#ffb3c3","Мэй/Том",`你nǐ 家jiā 有yǒu 几jǐ 个ge 人rén|Сколько человек в твоей семье?
+我wǒ 家jiā 有yǒu 五wǔ 个ge 人rén|В моей семье пять человек.
+我wǒ 有yǒu 哥哥gēge|У меня есть старший брат.
+她tā 有yǒu 一yí 个ge 妹妹mèimei|У неё есть младшая сестра.
+我wǒ 爸爸bàba 很hěn 忙máng|Мой папа очень занят.`],
+["Где живёшь","🏠","#e3f1d4,#b8dc96","Том/Юки",`你nǐ 住zhù 在zài 哪nǎr|Где ты живёшь?
+我wǒ 住zhù 在zài 北京Běijīng|Я живу в Пекине.
+他tā 住zhù 在zài 上海Shànghǎi|Он живёт в Шанхае.
+我wǒ 家jiā 在zài 学校xuéxiào 旁边pángbiān|Мой дом рядом со школой.
+我们wǒmen 住zhù 在zài 这儿zhèr|Мы живём здесь.`],
+["Дни недели","📅","#d9f1f4,#9fd8e0","Юки/Дэн",`今天jīntiān 是shì 星期xīngqī 几jǐ|Какой сегодня день недели?
+今天jīntiān 是shì 星期xīngqī 一yī|Сегодня понедельник.
+明天míngtiān 是shì 星期xīngqī 二èr|Завтра вторник.
+我wǒ 星期xīngqī 三sān 上学shàngxué|По средам я хожу в школу.
+星期xīngqī 六liù 不bú 上学shàngxué|В субботу в школу не ходят.`],
+["Класс","🎒","#ffe8d1,#ffc58f","Дэн/Лили",`教室jiàoshì 里lǐ 有yǒu 什么shénme|Что в классе?
+教室jiàoshì 里lǐ 有yǒu 桌子zhuōzi|В классе есть парты.
+桌子zhuōzi 上shàng 有yǒu 书shū|На парте лежит книга.
+这zhè 是shì 我wǒ 的de 书包shūbāo|Это мой рюкзак.
+那nà 是shì 老师lǎoshī 的de 电脑diànnǎo|То — компьютер учителя.`],
+["Еда","🍜","#fde4d0,#f7b98d","Лили/Мин",`你nǐ 喜欢xǐhuan 吃chī 什么shénme|Что ты любишь есть?
+我wǒ 喜欢xǐhuan 吃chī 面条miàntiáo|Я люблю лапшу.
+她tā 喜欢xǐhuan 吃chī 苹果píngguǒ|Она любит яблоки.
+我wǒ 不bù 喜欢xǐhuan 吃chī 鱼yú|Я не люблю рыбу.
+我们wǒmen 喝hē 茶chá 吧ba|Давайте выпьем чаю!`]];
+const $=s=>document.querySelector(s),sh=a=>[...a].sort(()=>Math.random()-.5),sp=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="zh-CN";u.rate=.8;speechSynthesis.speak(u)}catch(e){}};
+const P=s=>{const[a,r]=s.split("|"),k=a.split(" ").map(t=>{const m=t.match(/^([\u4e00-\u9fff]+)(.*)$/);return{h:m[1],p:m[2]}});return{k,r,h:k.map(x=>x.h).join(""),p:k.map(x=>x.p).join(" ")}};
+U.forEach(u=>u.S=u[4].split("\n").map(P));
+const NM=["Составь предложение","Вставь слово","Послушай и выбери перевод","Выбери иероглифы","Найди пары"],D=new Set(),ALL=U.flatMap(u=>u.S),pn=r=>r.endsWith("?")?"？":r.endsWith("!")?"！":"。";let cur=0;
+function nav(){$("#nv").innerHTML=U.map((u,i)=>`<button data-p="${i}" class="${cur==i?"on":""}">${u[1]} ${i+1}${[0,1,2,3,4].every(j=>D.has(i+"-"+j))?" ✓":""}</button>`).join("")+`<button data-p="t" class="${cur=="t"?"on":""}">📖 Тексты</button><button data-p="a" class="${cur=="a"?"on":""}">🔊 50 аудио</button>`}
+$("#nv").onclick=e=>{const b=e.target.closest("button");if(b)show(b.dataset.p)};
+function show(p){cur=p;nav();scrollTo(0,0);p=="t"?texts():p=="a"?audio():unit(+p)}
+function unit(i){const u=U[i];$("#pg").innerHTML=`<div class="hero" style="background:linear-gradient(135deg,${u[2]})"><span class="av">${u[1]}</span><div><small>Юнит ${i+1}</small><h2>${u[0]}</h2><p>${u[3].replace("/"," и ")}</p></div></div>`;[t1,t2,t3,t4,t5].forEach((f,j)=>{const d=document.createElement("div");d.className="tk"+(D.has(i+"-"+j)?" ok":"");d.innerHTML=`<h3><i>${j+1}</i>${NM[j]}</h3><div class="b"></div>`;$("#pg").append(d);f(d.querySelector(".b"),{s:u.S,ok:()=>{d.classList.add("ok");D.add(i+"-"+j);nav()}})})}
+function mcq(b,pre,o,ok){const r=sh(o.map((x,i)=>i));b.innerHTML=pre+`<div class="op">${r.map(i=>`<button data-o="${i}">${o[i].t}</button>`).join("")}</div>`;b.onclick=e=>{const x=e.target.closest("button[data-o]");if(!x||x.disabled)return;if(o[x.dataset.o].ok){b.querySelectorAll(".op button").forEach(y=>y.disabled=true);x.classList.add("ok");ok()}else{x.classList.add("no");x.disabled=true}}}
+function t1(b,c){const s=c.s[0],sel=[],bank=sh(s.k.map((_,i)=>i));const dr=()=>{const full=sel.length==s.k.length,ok=full&&sel.map(i=>s.k[i].h).join("")==s.h;b.innerHTML=`<p>${s.r}</p><div class="sl">${s.k.map((_,n)=>`<button class="tl" data-s="${n}">${sel[n]!=null?s.k[sel[n]].h:"＋"}</button>`).join("")}</div><div class="bk">${bank.map(i=>`<button class="tl" data-b="${i}" ${sel.includes(i)?"disabled":""}>${s.k[i].h}<small>${s.k[i].p}</small></button>`).join("")}</div><p class="fb">${ok?"✓ "+s.h+" · "+s.p:full?"Не так. Нажмите на слово сверху, чтобы убрать его":""}</p>`;if(ok){sp(s.h);c.ok()}};b.onclick=e=>{const x=e.target.closest("button");if(!x)return;if(x.dataset.b!=null&&sel.length<s.k.length)sel.push(+x.dataset.b);else if(x.dataset.s!=null&&sel[x.dataset.s]!=null)sel.splice(+x.dataset.s,1);else return;dr()};dr()}
+function t2(b,c){const s=c.s[1],i=Math.floor(Math.random()*s.k.length),w=s.k[i],ds=c.s.flatMap(x=>x.k).filter((t,n,a)=>t.h!=w.h&&!s.k.some(q=>q.h==t.h)&&a.findIndex(q=>q.h==t.h)==n);mcq(b,`<p>${s.r}</p><p class="big">${s.k.map((t,n)=>n==i?"＿＿":t.h).join(" ")}</p>`,[w,...sh(ds).slice(0,2)].map((t,n)=>({t:t.h+"<small>"+t.p+"</small>",ok:n==0})),()=>{sp(s.h);c.ok()})}
+function t3(b,c){const s=c.s[2],o=sh(c.s.filter(x=>x!=s)).slice(0,2);mcq(b,`<button class="pl" onclick="sp('${s.h}')">▶ Слушать</button>`,[s,...o].map((x,n)=>({t:x.r,ok:n==0})),()=>{b.insertAdjacentHTML("beforeend",`<p class="fb">${s.h} · ${s.p}</p>`);c.ok()})}
+function t4(b,c){const s=c.s[3],o=sh(c.s.filter(x=>x!=s)).slice(0,2);mcq(b,`<p>${s.r}</p>`,[s,...o].map((x,n)=>({t:x.h+"<small>"+x.p+"</small>",ok:n==0})),()=>{sp(s.h);c.ok()})}
+function t5(b,c){const L=sh(c.s.map((_,i)=>i)),R=sh(c.s.map((_,i)=>i));let sel=null,n=0;b.innerHTML=`<div class="pr2"><div>${L.map(i=>`<button class="tl w" data-q="${i}">${c.s[i].h}<small>${c.s[i].p}</small></button>`).join("")}</div><div>${R.map(i=>`<button class="tl w" data-a="${i}">${c.s[i].r}</button>`).join("")}</div></div>`;b.onclick=e=>{const x=e.target.closest("button");if(!x||x.disabled)return;if(x.dataset.q!=null){b.querySelectorAll("[data-q]").forEach(y=>y.classList.remove("sel"));x.classList.add("sel");sel=x.dataset.q;sp(c.s[sel].h)}else if(sel!=null){if(x.dataset.a==sel){x.classList.add("ok");x.disabled=true;const l=b.querySelector(`[data-q="${sel}"]`);l.classList.remove("sel");l.classList.add("ok");l.disabled=true;sel=null;if(++n==c.s.length)c.ok()}else{x.classList.add("no");setTimeout(()=>x.classList.remove("no"),500)}}}}
+function texts(){$("#pg").innerHTML=`<div class="ctl"><button class="go" id="tp">Пиньинь: вкл</button><button class="go" id="tt">Перевод: вкл</button></div><p class="mu">Нажмите на слово, чтобы услышать его, или на 🔊 для всей строки.</p><div id="tx">`+U.map((u,i)=>{const[a,b]=u[3].split("/");return`<div class="tk"><h3><i>${i+1}</i>${u[1]} ${u[0]}</h3>${u.S.map((s,j)=>`<div class="ln"><b>${j%2?b:a}</b> <button class="pl" data-l="${s.h}">🔊</button><div class="zh">${s.k.map(t=>`<ruby data-w="${t.h}">${t.h}<rt>${t.p}</rt></ruby>`).join("")}${pn(s.r)}</div><div class="ru">${s.r}</div></div>`).join("")}</div>`}).join("")+`</div>`}
+function audio(){$("#pg").innerHTML=`<p class="mu">50 мини-аудио: нажмите ▶, переведите на слух, затем 👁 покажет ответ.</p><div class="ctl"><button class="go" id="ar">🎲 Случайное</button></div><div class="ag">${ALL.map((s,n)=>`<div class="au"><b>${n+1}</b><button class="pl" data-l="${s.h}">▶</button><button class="pl" data-e="${n}">👁</button><div class="rv" id="e${n}" hidden>${s.h}<small>${s.p}</small>${s.r}</div></div>`).join("")}</div>`}
+$("#pg").onclick=e=>{const x=e.target.closest("[data-l],[data-w],[data-e],#tp,#tt,#ar");if(!x)return;const g=$("#tx");if(x.dataset.l)sp(x.dataset.l);else if(x.dataset.w)sp(x.dataset.w);else if(x.dataset.e!=null)$("#e"+x.dataset.e).hidden=!$("#e"+x.dataset.e).hidden;else if(x.id=="ar")sp(ALL[Math.floor(Math.random()*ALL.length)].h);else if(x.id=="tp"){g.classList.toggle("nopy");x.textContent="Пиньинь: "+(g.classList.contains("nopy")?"выкл":"вкл")}else{g.classList.toggle("notr");x.textContent="Перевод: "+(g.classList.contains("notr")?"выкл":"вкл")}};
+show(0);
+</script></body></html>

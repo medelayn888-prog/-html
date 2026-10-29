@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Китайский: ориентируемся в пространстве</title>
+<style>
+:root{--ink:#17233f;--muted:#65718b;--cream:#fffaf0;--blue:#536dfe;--cyan:#5dd9e8;--pink:#ff7e9d;--gold:#ffc857;--green:#28b985;--red:#ef5a70;--card:rgba(255,255,255,.88);--shadow:0 16px 38px rgba(36,55,105,.13)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-rounded,"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 8%,#dff8ff 0,transparent 28%),radial-gradient(circle at 95% 18%,#ffe1ec 0,transparent 27%),linear-gradient(135deg,#f5f7ff,#fff8ec);min-height:100vh}
+button{font:inherit;cursor:pointer;border:0;transition:transform .16s,box-shadow .16s,filter .16s}button:hover{transform:translateY(-2px);filter:brightness(1.03)}button:focus-visible{outline:3px solid #17233f;outline-offset:3px}
+.shell{max-width:1120px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0 20px}.brand{display:flex;align-items:center;gap:12px}.logo{width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,#6c82ff,#8b55e8);display:grid;place-items:center;color:white;font-size:29px;box-shadow:0 8px 18px #697aff55}.brand h1{font-size:clamp(19px,3vw,27px);margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}.pill{background:#fff;border:1px solid #e5e9f5;padding:10px 13px;border-radius:999px;color:#47516c;font-size:13px;white-space:nowrap}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:18px}.tab{padding:13px 8px;border-radius:16px;background:#ffffffa8;color:#5c6680;font-weight:800;border:1px solid #e7eaf5}.tab span{display:block;font-size:11px;font-weight:600;margin-top:4px}.tab.active{background:linear-gradient(135deg,#596fff,#8758e8);color:#fff;box-shadow:0 9px 22px #697aff40;border-color:transparent}
+.page{display:none;animation:rise .3s ease}.page.active{display:block}@keyframes rise{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#263e78,#5a65ce 58%,#8d66dd);border-radius:28px;padding:clamp(22px,4vw,38px);color:white;box-shadow:var(--shadow);margin-bottom:18px}.hero:after{content:"✦";position:absolute;right:6%;top:6%;font-size:80px;color:#ffffff22}.hero h2{font-size:clamp(25px,4vw,38px);line-height:1.12;margin:0 0 10px;max-width:700px}.hero p{margin:0;max-width:720px;color:#e8ebff;line-height:1.65}.hero .tag{display:inline-block;background:#ffffff20;border:1px solid #ffffff35;border-radius:99px;padding:6px 11px;font-size:12px;margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--card);border:1px solid #e9edf7;border-radius:23px;padding:22px;box-shadow:var(--shadow)}.panel h3{margin:0 0 13px;font-size:20px}.muted{color:var(--muted);line-height:1.65}.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}.block{padding:12px 14px;border-radius:14px;background:#edf0ff;color:#3547b5;font-weight:900;text-align:center}.block.subject{background:#e5f8ef;color:#167951}.block.verb{background:#fff0d8;color:#9a5a00}.block.place{background:#ffe7ee;color:#a72e54}.plus{font-size:19px;color:#929bb1;font-weight:900}.example{padding:15px;border-radius:17px;background:#f7f8ff;margin:10px 0}.zh{font-size:26px;font-weight:900;letter-spacing:1px}.py{color:#65718b;font-size:14px;margin:4px 0}.translation{font-weight:700}.note{padding:13px 15px;border-radius:15px;background:#fff4d9;border:1px solid #ffe5a1;line-height:1.55;margin-top:12px}.good{background:#e4f9ee;border-color:#b8efd3}.bad{background:#fff0f1;border-color:#ffc9d0}
+.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid #edf0f6;font-size:14px}th{color:#65718b;font-size:12px;text-transform:uppercase;letter-spacing:.05em}td strong{font-size:20px}
+.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:12px 0}.btn{border-radius:13px;padding:12px 16px;font-weight:800;background:#edf0ff;color:#3547b5}.btn.primary{background:linear-gradient(135deg,#596fff,#8758e8);color:white;box-shadow:0 7px 15px #697aff33}.btn.soft{background:#e4f9ee;color:#167951}.btn.small{padding:9px 12px;font-size:13px}.switch{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:12px;background:#f4f6fb;color:#59637b;font-size:13px;font-weight:700}.switch input{accent-color:#6574ff;width:17px;height:17px}
+.map-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.compass{min-height:360px;position:relative;display:grid;place-items:center;background:linear-gradient(145deg,#e8faff,#e9eaff);border-radius:22px;overflow:hidden;border:1px solid #dce8ff}.compass:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;border:2px dashed #a9b8e7}.compass:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;border:2px solid #ffffffb8}.center{z-index:2;width:112px;height:112px;border-radius:32px;background:linear-gradient(145deg,#ffce69,#ff986b);display:grid;place-items:center;text-align:center;box-shadow:0 13px 24px #d77a5d40;transform:rotate(-4deg)}.center b{font-size:40px;color:#703e36}.center small{font-weight:900;color:#703e36}.dir{position:absolute;z-index:3;min-width:102px;padding:12px 10px;border-radius:18px;background:#fff;box-shadow:0 8px 18px #5668a326;text-align:center;border:2px solid transparent}.dir b{display:block;font-size:29px}.dir small{display:block;color:#63708a;margin-top:2px}.dir.n{top:16px;left:50%;transform:translateX(-50%)}.dir.s{bottom:16px;left:50%;transform:translateX(-50%)}.dir.w{left:12px;top:50%;transform:translateY(-50%)}.dir.e{right:12px;top:50%;transform:translateY(-50%)}.dir.nw{top:74px;left:17%}.dir.ne{top:74px;right:17%}.dir.sw{bottom:74px;left:17%}.dir.se{bottom:74px;right:17%}.dir:hover,.dir.selected{border-color:#6878ff;box-shadow:0 0 0 4px #6878ff22,0 8px 18px #5668a326}.dir:active{transform:scale(.97)}.dir.n:active,.dir.s:active{transform:translateX(-50%) scale(.97)}.dir.w:active,.dir.e:active{transform:translateY(-50%) scale(.97)}
+.dirlist{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.dircard{padding:12px;border-radius:15px;background:#f8f9ff;border:1px solid #e8ecf8;text-align:left}.dircard b{font-size:23px}.dircard small{display:block;color:#68738b;margin-top:3px}.dircard.active{border-color:#6978ff;background:#edf0ff}
+.feedback{min-height:46px;margin-top:12px;border-radius:14px;padding:12px 14px;background:#f4f6fb;color:#5e6880;font-weight:700;line-height:1.4}.feedback.ok{background:#e2f9ec;color:#16764f}.feedback.no{background:#fff0f1;color:#b12c45}
+.taskhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.progress{height:8px;background:#edf0f7;border-radius:99px;overflow:hidden;margin:12px 0 18px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#5dd9e8,#6b71ff);transition:width .3s}
+.question{font-size:clamp(22px,4vw,31px);font-weight:900;margin:10px 0}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.option{padding:16px;border-radius:17px;background:#f7f8ff;border:2px solid #e9ecf8;text-align:left;font-weight:800;color:var(--ink);min-height:70px}.option .opzh{font-size:24px;display:block;margin-bottom:4px}.option.correct{background:#e2f9ec;border-color:#43c891}.option.wrong{background:#fff0f1;border-color:#f27a8a}
+select,input[type=text]{border:1px solid #dfe4f2;border-radius:12px;padding:12px;font:inherit;background:white;color:var(--ink);max-width:100%}.buildrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px;background:#f7f8ff;border-radius:17px;min-height:66px}.slot{min-width:78px;padding:12px 10px;border:2px dashed #c4cbe0;border-radius:12px;text-align:center;color:#929bb1;font-weight:800}.slot.filled{border-style:solid;border-color:#7a86ff;background:#edf0ff;color:#3447b8}.wordbank{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.word{padding:11px 14px;border-radius:12px;background:#fff;border:1px solid #e4e8f5;font-weight:800;box-shadow:0 3px 7px #17233f08}.word.used{opacity:.35;pointer-events:none}.footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px;color:#7b849b;font-size:12px}.mascot{font-size:37px;display:inline-block;filter:drop-shadow(0 5px 3px #3332);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-6px) rotate(3deg)}}
+@media(max-width:760px){.shell{padding:12px}.tabs{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.tab{padding:10px 3px;font-size:12px;border-radius:12px}.tab span{font-size:9px}.grid2,.map-layout{grid-template-columns:1fr}.panel{padding:17px}.compass{min-height:340px}.dir{min-width:78px;padding:8px 5px}.dir b{font-size:24px}.dir small{font-size:10px}.dir.nw,.dir.ne{top:70px}.dir.sw,.dir.se{bottom:70px}.dir.w{left:5px}.dir.e{right:5px}.dirlist{grid-template-columns:repeat(2,1fr)}.pill{display:none}.options{grid-template-columns:1fr 1fr}.hero{border-radius:22px}}
+@media(max-width:390px){.dir.nw,.dir.sw{left:10%}.dir.ne,.dir.se{right:10%}.dir{min-width:72px}.brand p{font-size:11px}.options{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+ <div class="brand"><div class="logo">方</div><div><h1>Китайский: ориентируемся в пространстве</h1><p>Понятное правило · визуальная карта · 3 игровые тренировки</p></div></div>
+ <div class="pill">✨ Учимся без зубрёжки</div>
+</header>
+<nav class="tabs" aria-label="Разделы урока">
+ <button class="tab active" data-page="0">01 <span>Правило</span></button>
+ <button class="tab" data-page="1">02 <span>Карта</span></button>
+ <button class="tab" data-page="2">03 <span>Найди</span></button>
+ <button class="tab" data-page="3">04 <span>Собери</span></button>
+ <button class="tab" data-page="4">05 <span>Переведи</span></button>
+</nav>
+
+<section class="page active" id="p0">
+ <div class="hero"><span class="tag">МИНИ-УРОК ДЛЯ ВЗРОСЛЫХ</span><h2>Куда поставить слово, чтобы китайское предложение звучало естественно?</h2><p>Представь, что предложение — это конструктор. Сначала называем предмет или человека, затем говорим, где он находится, и добавляем место: на столе, слева, внутри, напротив.</p></div>
+ <div class="grid2">
+  <article class="panel"><h3>Главная схема: «где находится?»</h3><p class="muted">Когда мы сообщаем местоположение предмета, обычно используем конструкцию:</p>
+   <div class="formula"><div class="block subject">Подлежащее<br><small>кто? что?</small></div><div class="plus">+</div><div class="block verb">在 zài<br><small>находится</small></div><div class="plus">+</div><div class="block place">Место<br><small>где?</small></div></div>
+   <div class="example"><div class="zh">书在桌子上。</div><div class="py">Shū zài zhuōzi shàng.</div><div class="translation">Книга на столе.</div></div>
+   <p class="muted">书 — книга · 在 — находиться · 桌子 — стол · 上 — сверху / на поверхности.</p>
+   <div class="note good"><b>Запомни:</b> 在 стоит перед местом. А 上、下、里、旁边 и другие слова уточняют, где именно находится предмет.</div>
+  </article>
+  <article class="panel"><h3>Как собрать фразу по шагам</h3>
+   <div class="example"><b>① Кто или что?</b><div class="zh">猫</div><div class="py">māo</div><div class="muted">Кошка</div></div>
+   <div class="example"><b>② Где находится?</b><div class="zh">在</div><div class="py">zài</div><div class="muted">Находится / находится в каком-то месте</div></div>
+   <div class="example"><b>③ Какое место?</b><div class="zh">椅子下面</div><div class="py">yǐzi xiàmiàn</div><div class="muted">Под стулом</div></div>
+   <div class="example"><div class="zh">猫在椅子下面。</div><div class="py">Māo zài yǐzi xiàmiàn.</div><div class="translation">Кошка под стулом.</div></div>
+  </article>
+ </div>
+ <article class="panel" style="margin-top:16px"><h3>Куда ставить разные слова?</h3><div class="tablewrap"><table><thead><tr><th>Задача</th><th>Схема</th><th>Пример</th><th>Перевод</th></tr></thead><tbody>
+ <tr><td>Предмет где-то находится</td><td><b>Кто/что + 在 + место</b></td><td><strong>我在家。</strong><br>Wǒ zài jiā.</td><td>Я дома.</td></tr>
+ <tr><td>На / под / внутри чего-то</td><td><b>предмет + 在 + объект + 上/下/里</b></td><td><strong>书在包里。</strong><br>Shū zài bāo lǐ.</td><td>Книга в сумке.</td></tr>
+ <tr><td>Слева / справа / рядом</td><td><b>предмет + 在 + объект + 左边/右边/旁边</b></td><td><strong>银行在学校旁边。</strong><br>Yínháng zài xuéxiào pángbiān.</td><td>Банк рядом со школой.</td></tr>
+ <tr><td>Направление движения</td><td><b>向/往 + направление + глагол</b></td><td><strong>向左转。</strong><br>Xiàng zuǒ zhuǎn.</td><td>Поверните налево.</td></tr>
+ </tbody></table></div>
+ <div class="note"><b>Важное различие:</b> «находится слева» — 在左边 (zài zuǒbian), а «повернуть налево» — 向左转 (xiàng zuǒ zhuǎn). Это разные конструкции. Стороны света: 东 восток, 西 запад, 南 юг, 北 север.</div></article>
+</section>
+
+<section class="page" id="p1">
+ <div class="hero"><span class="tag">СТРАНИЦА 2 · ВИЗУАЛЬНАЯ КАРТА</span><h2>Исследуй пространство</h2><p>Нажимай на направление на карте или в списке. Включай и выключай пиньинь и перевод, чтобы постепенно проверять себя по памяти.</p></div>
+ <div class="panel">
+  <div class="controls">
+   <label class="switch"><input type="checkbox" id="showPy" checked> Показывать пиньинь</label>
+   <label class="switch"><input type="checkbox" id="showRu" checked> Показывать перевод</label>
+   <button class="btn small" id="randomDir">🎲 Случайное направление</button>
+   <button class="btn small" id="hearDir">🔊 Произнести</button>
+  </div>
+  <div class="map-layout">
+   <div class="compass" id="compass">
+    <button class="dir n" data-key="北"><b>北</b><small class="py">běi</small><small>север</small></button>
+    <button class="dir s" data-key="南"><b>南</b><small class="py">nán</small><small>юг</small></button>
+    <button class="dir w" data-key="西"><b>西</b><small class="py">xī</small><small>запад</small></button>
+    <button class="dir e" data-key="东"><b>东</b><small class="py">dōng</small><small>восток</small></button>
+    <button class="dir nw" data-key="西北"><b>西北</b><small class="py">xīběi</small><small>северо-запад</small></button>
+    <button class="dir ne" data-key="东北"><b>东北</b><small class="py">dōngběi</small><small>северо-восток</small></button>
+    <button class="dir sw" data-key="西南"><b>西南</b><small class="py">xīnán</small><small>юго-запад</small></button>
+    <button class="dir se" data-key="东南"><b>东南</b><small class="py">dōngnán</small><small>юго-восток</small></button>
+    <div class="center"><div><b>方位</b><small>fāngwèi<br>направления</small></div></div>
+   </div>
+   <div><h3 id="selectedTitle">Выбери направление</h3><p class="muted" id="selectedDesc">Нажми на одну из кнопок на карте, чтобы увидеть подсказку.</p><div class="dirlist" id="dirlist"></div><div class="feedback" id="mapFeedback">💡 Подсказка: 东 — восток, 西 — запад.</div></div>
+  </div>
+  <div class="controls"><button class="btn primary" id="hideAll">🙈 Проверка по памяти</button><button class="btn" id="showAll">👀 Показать всё</button></div>
+ </div>
+ <div class="panel" style="margin-top:16px"><h3>Позиции вокруг предмета</h3><div class="dirlist" id="positionCards"></div><p class="muted">Это слова о положении предметов, а не стороны света: 上 shàng — сверху/на, 下 xià — снизу/под, 前 qián — впереди/перед, 后 hòu — сзади/за, 里 lǐ — внутри, 外 wài — снаружи, 左边 zuǒbian — слева, 右边 yòubian — справа, 旁边 pángbiān — рядом, 对面 duìmiàn — напротив.</p></div>
+</section>
+
+<section class="page" id="p2">
+ <div class="hero"><span class="tag">ИГРА 1 · НАЙДИ НА КАРТЕ</span><h2>Компас-приключение 🧭</h2><p>Прочитай вопрос и выбери нужную сторону. Варианты перемешиваются при каждом новом раунде. За правильный ответ — волшебный звук, за ошибку — мягкий сигнал и новая попытка.</p></div>
+ <div class="panel"><div class="taskhead"><h3>Раунд <span id="findRound">1</span> из 8</h3><span class="pill" id="findScore">Очки: 0</span></div><div class="progress"><span id="findProgress"></span></div><div class="mascot">🦊</div><p class="muted">Как будет по-китайски:</p><div class="question" id="findQuestion">восток</div><div class="options" id="findOptions"></div><div class="feedback" id="findFeedback">Выбери ответ на карте слов.</div><div class="controls"><button class="btn primary" id="nextFind">Следующий раунд →</button><button class="btn" id="resetFind">↻ Начать заново</button></div></div>
+</section>
+
+<section class="page" id="p3">
+ <div class="hero"><span class="tag">ИГРА 2 · СОБЕРИ ПРЕДЛОЖЕНИЕ</span><h2>Собери языковой конструктор 🧩</h2><p>Поставь блоки в правильном порядке. Подсказка: сначала тот, о ком говорим, затем 在, потом место. Нажми на блоки снизу, чтобы добавить их в предложение.</p></div>
+ <div class="panel"><div class="taskhead"><h3>Задание <span id="buildRound">1</span> из 6</h3><span class="pill" id="buildScore">Очки: 0</span></div><div class="progress"><span id="buildProgress"></span></div><p class="muted">Составь китайское предложение со значением:</p><div class="question" id="buildPrompt">Книга на столе.</div><div class="buildrow" id="buildSlots"></div><div class="wordbank" id="wordbank"></div><div class="feedback" id="buildFeedback">Выбери слова в правильном порядке.</div><div class="controls"><button class="btn primary" id="checkBuild">Проверить ✓</button><button class="btn" id="undoBuild">Убрать последний блок</button><button class="btn" id="nextBuild">Следующее →</button></div><div class="example" id="buildReveal" style="display:none"><div class="zh"></div><div class="py"></div><div class="translation"></div></div></div>
+</section>
+
+<section class="page" id="p4">
+ <div class="hero"><span class="tag">ИГРА 3 · ПЕРЕВОДЧИК</span><h2>Поймай смысл ✨</h2><p>Прочитай китайскую фразу и выбери точный русский перевод. Здесь тренируем не отдельные слова, а понимание всей конструкции.</p></div>
+ <div class="panel"><div class="taskhead"><h3>Раунд <span id="transRound">1</span> из 8</h3><span class="pill" id="transScore">Очки: 0</span></div><div class="progress"><span id="transProgress"></span></div><p class="muted">Что означает предложение?</p><div class="example"><div class="zh" id="transZh">书在桌子上。</div><div class="py" id="transPy">Shū zài zhuōzi shàng.</div></div><div class="options" id="transOptions"></div><div class="feedback" id="transFeedback">Выбери перевод.</div><div class="controls"><button class="btn primary" id="nextTrans">Следующий раунд →</button><button class="btn" id="resetTrans">↻ Начать заново</button><button class="btn" id="speakTrans">🔊 Послушать фразу</button></div></div>
+</section>
+<footer class="footer"><span>Учебный тренажёр · китайский для взрослых</span><span>Прогресс сохраняется в рамках текущего занятия</span></footer>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function shuffle(a){let b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+function sound(kind){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),now=c.currentTime;const notes=kind==='ok'?[660,880,1175]:kind==='no'?[240,180]:[520,780];notes.forEach((f,i)=>{let o=c.createOscillator(),g=c.createGain();o.type=kind==='ok'?'sine':'triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,now+i*.105);g.gain.exponentialRampToValueAtTime(kind==='ok'?.12:.07,now+i*.105+.025);g.gain.exponentialRampToValueAtTime(.0001,now+i*.105+.18);o.connect(g);g.connect(c.destination);o.start(now+i*.105);o.stop(now+i*.105+.2)});setTimeout(()=>c.close(),900)}catch(e){}}
+function speak(text,lang='zh-CN'){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.82;window.speechSynthesis.speak(u)}
+const pages=$$('.page'),tabs=$$('.tab');function goPage(i){pages.forEach((p,n)=>p.classList.toggle('active',i===n));tabs.forEach((t,n)=>t.classList.toggle('active',i===n));window.scrollTo({top:0,behavior:'smooth'})}tabs.forEach(t=>t.addEventListener('click',()=>goPage(+t.dataset.page)));
+const directions=[
+{zh:'东',py:'dōng',ru:'восток'},{zh:'西',py:'xī',ru:'запад'},{zh:'南',py:'nán',ru:'юг'},{zh:'北',py:'běi',ru:'север'},
+{zh:'东北',py:'dōngběi',ru:'северо-восток'},{zh:'西北',py:'xīběi',ru:'северо-запад'},{zh:'东南',py:'dōngnán',ru:'юго-восток'},{zh:'西南',py:'xīnán',ru:'юго-запад'}];
+const positions=[
+{zh:'上面',py:'shàngmiàn',ru:'наверху / на поверхности'},{zh:'下面',py:'xiàmiàn',ru:'внизу / под'},{zh:'前面',py:'qiánmiàn',ru:'впереди / перед'},{zh:'后面',py:'hòumiàn',ru:'позади / за'},
+{zh:'里面',py:'lǐmiàn',ru:'внутри'},{zh:'外面',py:'wàimiàn',ru:'снаружи'},{zh:'左边',py:'zuǒbian',ru:'слева'},{zh:'右边',py:'yòubian',ru:'справа'},{zh:'旁边',py:'pángbiān',ru:'рядом'},{zh:'对面',py:'duìmiàn',ru:'напротив'}];
+let chosen=null;
+function renderMap(){const list=$('#dirlist');list.innerHTML='';directions.forEach(d=>{const b=document.createElement('button');b.className='dircard';b.innerHTML=`<b>${d.zh}</b><small class="pytxt">${d.py}</small><small class="rutxt">${d.ru}</small>`;b.onclick=()=>selectDirection(d);list.append(b)});$('#positionCards').innerHTML=positions.map(p=>`<div class="dircard"><b>${p.zh}</b><small class="pytxt">${p.py}</small><small class="rutxt">${p.ru}</small></div>`).join('');$$('.dir').forEach(b=>b.onclick=()=>selectDirection(directions.find(d=>d.zh===b.dataset.key)));updateVisibility()}
+function selectDirection(d){chosen=d;$$('.dir').forEach(b=>b.classList.toggle('selected',b.dataset.key===d.zh));$$('.dircard').forEach(b=>b.classList.toggle('active',b.querySelector('b')?.textContent===d.zh));$('#selectedTitle').textContent=d.zh;$('#selectedDesc').innerHTML=`<b>${d.py}</b> — ${d.ru}`;$('#mapFeedback').textContent='✨ Отлично! Повтори иероглиф, чтение и значение вслух.';$('#mapFeedback').className='feedback ok';sound('tap')}
+function updateVisibility(){const py=$('#showPy').checked,ru=$('#showRu').checked;$$('.py').forEach(e=>{if(e.closest('.dir'))e.style.display=py?'':'none'});$$('.pytxt').forEach(e=>e.style.display=py?'':'none');$$('.rutxt').forEach(e=>e.style.display=ru?'':'none');$$('.dir small:not(.py)').forEach(e=>e.style.display=ru?'':'none');if(!py&&!ru)$('#mapFeedback').textContent='Режим проверки: попробуй вспомнить чтение и перевод самостоятельно.'}
+$('#showPy').onchange=updateVisibility;$('#showRu').onchange=updateVisibility;$('#randomDir').onclick=()=>selectDirection(directions[Math.floor(Math.random()*directions.length)]);$('#hearDir').onclick=()=>chosen?speak(chosen.zh):speak('东');$('#hideAll').onclick=()=>{$('#showPy').checked=false;$('#showRu').checked=false;updateVisibility()};$('#showAll').onclick=()=>{$('#showPy').checked=true;$('#showRu').checked=true;updateVisibility()};
+renderMap();
+const findPool=[...directions,...positions.slice(0,8).map(p=>({zh:p.zh,py:p.py,ru:p.ru}))];let findState={round:1,score:0,answer:null,locked:false};
+function startFind(){findState={round:1,score:0,answer:null,locked:false};newFind()}
+function newFind(){findState.locked=false;$('#findRound').textContent=findState.round;$('#findScore').textContent='Очки: '+findState.score;$('#findProgress').style.width=((findState.round-1)/8*100)+'%';let pool=shuffle(findPool);findState.answer=pool[0];$('#findQuestion').textContent=findState.answer.ru;$('#findOptions').innerHTML='';shuffle([findState.answer,...pool.filter(x=>x.zh!==findState.answer.zh).slice(0,3)]).forEach(d=>{let b=document.createElement('button');b.className='option';b.innerHTML=`<span class="opzh">${d.zh}</span><span>${d.py}</span>`;b.onclick=()=>{if(findState.locked)return;findState.locked=true;if(d.zh===findState.answer.zh){b.classList.add('correct');findState.score++;$('#findFeedback').className='feedback ok';$('#findFeedback').textContent='✨ Верно! '+d.zh+' — '+d.ru+'. Отличная работа!';sound('ok')}else{b.classList.add('wrong');$('#findFeedback').className='feedback no';$('#findFeedback').textContent='Почти! Правильный ответ: '+findState.answer.zh+' ('+findState.answer.py+'). Попробуй запомнить.';sound('no');$$('#findOptions .option').forEach(x=>{if(x.querySelector('.opzh').textContent===findState.answer.zh)x.classList.add('correct')})}$('#findScore').textContent='Очки: '+findState.score;$('#findProgress').style.width=(findState.round/8*100)+'%'};$('#findOptions').append(b)});$('#findFeedback').className='feedback';$('#findFeedback').textContent='Выбери китайское слово.'}
+$('#nextFind').onclick=()=>{if(findState.round>=8){$('#findFeedback').className='feedback ok';$('#findFeedback').textContent=`Раунд завершён! Результат: ${findState.score} из 8. Нажми «Начать заново», чтобы повторить.`;sound('ok');return}findState.round++;newFind()};$('#resetFind').onclick=startFind;startFind();
+const builds=[
+{ru:'Книга на столе.',parts:['书','在','桌子','上'],py:'Shū zài zhuōzi shàng.',zh:'书在桌子上。'},
+{ru:'Кошка под стулом.',parts:['猫','在','椅子','下面'],py:'Māo zài yǐzi xiàmiàn.',zh:'猫在椅子下面。'},
+{ru:'Я дома.',parts:['我','在','家'],py:'Wǒ zài jiā.',zh:'我在家。'},
+{ru:'Книга в сумке.',parts:['书','在','包','里'],py:'Shū zài bāo lǐ.',zh:'书在包里。'},
+{ru:'Банк рядом со школой.',parts:['银行','在','学校','旁边'],py:'Yínháng zài xuéxiào pángbiān.',zh:'银行在学校旁边。'},
+{ru:'Магазин напротив школы.',parts:['商店','在','学校','对面'],py:'Shāngdiàn zài xuéxiào duìmiàn.',zh:'商店在学校对面。'}];
+let buildState={round:1,score:0,task:null,selected:[],checked:false};
+function startBuild(){buildState={round:1,score:0,task:null,selected:[],checked:false};newBuild()}
+function newBuild(){buildState.task=shuffle(builds)[0];buildState.selected=[];buildState.checked=false;$('#buildRound').textContent=buildState.round;$('#buildScore').textContent='Очки: '+buildState.score;$('#buildProgress').style.width=((buildState.round-1)/6*100)+'%';$('#buildPrompt').textContent=buildState.task.ru;$('#buildFeedback').className='feedback';$('#buildFeedback').textContent='Нажимай на блоки в правильном порядке.';$('#buildReveal').style.display='none';renderBuild()}
+function renderBuild(){let slots=$('#buildSlots');slots.innerHTML='';let n=buildState.task.parts.length;for(let i=0;i<n;i++){let s=document.createElement('div');s.className='slot'+(buildState.selected[i]?' filled':'');s.textContent=buildState.selected[i]||['Кто?','在','Место','Часть места'][Math.min(i,3)];slots.append(s)}let bank=$('#wordbank');bank.innerHTML='';shuffle(buildState.task.parts.map((w,i)=>({w,i}))).forEach(o=>{let b=document.createElement('button');b.className='word'+(buildState.selected.includes(o.w)?' used':'');b.textContent=o.w;b.onclick=()=>{if(buildState.checked||buildState.selected.filter(x=>x===o.w).length>=buildState.task.parts.filter(x=>x===o.w).length)return;buildState.selected.push(o.w);renderBuild();sound('tap')};bank.append(b)})}
+$('#checkBuild').onclick=()=>{if(buildState.checked)return;if(buildState.selected.length!==buildState.task.parts.length){$('#buildFeedback').className='feedback no';$('#buildFeedback').textContent='Добавь все блоки, прежде чем проверять.';sound('no');return}buildState.checked=true;let ok=buildState.selected.join('|')===buildState.task.parts.join('|');if(ok){buildState.score++;$('#buildFeedback').className='feedback ok';$('#buildFeedback').textContent='✨ Собрано правильно! Ты отлично видишь структуру предложения.';sound('ok')}else{$('#buildFeedback').className='feedback no';$('#buildFeedback').textContent='Пока не совсем. Правильный порядок показан ниже — обрати внимание на 在.';sound('no')}$('#buildScore').textContent='Очки: '+buildState.score;$('#buildProgress').style.width=(buildState.round/6*100)+'%';let r=$('#buildReveal');r.style.display='block';r.querySelector('.zh').textContent=buildState.task.zh;r.querySelector('.py').textContent=buildState.task.py;r.querySelector('.translation').textContent=buildState.task.ru};
+$('#undoBuild').onclick=()=>{if(buildState.checked)return;buildState.selected.pop();renderBuild()};$('#nextBuild').onclick=()=>{if(buildState.round>=6){$('#buildFeedback').className='feedback ok';$('#buildFeedback').textContent=`Тренировка завершена! Ты набрал(а) ${buildState.score} из 6. Нажми «Начать заново» через переход на другую вкладку и обратно либо обнови страницу.`;sound('ok');return}buildState.round++;newBuild()};startBuild();
+const translations=[
+{zh:'书在桌子上。',py:'Shū zài zhuōzi shàng.',ru:'Книга на столе.'},
+{zh:'猫在椅子下面。',py:'Māo zài yǐzi xiàmiàn.',ru:'Кошка под стулом.'},
+{zh:'我在家。',py:'Wǒ zài jiā.',ru:'Я дома.'},
+{zh:'书在包里。',py:'Shū zài bāo lǐ.',ru:'Книга в сумке.'},
+{zh:'银行在学校旁边。',py:'Yínháng zài xuéxiào pángbiān.',ru:'Банк рядом со школой.'},
+{zh:'商店在学校对面。',py:'Shāngdiàn zài xuéxiào duìmiàn.',ru:'Магазин напротив школы.'},
+{zh:'学校在北边。',py:'Xuéxiào zài běibian.',ru:'Школа находится на севере.'},
+{zh:'请向左转。',py:'Qǐng xiàng zuǒ zhuǎn.',ru:'Пожалуйста, поверните налево.'}];
+let transState={round:1,score:0,task:null,locked:false};
+function startTrans(){transState={round:1,score:0,task:null,locked:false};newTrans()}
+function newTrans(){transState.locked=false;transState.task=shuffle(translations)[0];$('#transRound').textContent=transState.round;$('#transScore').textContent='Очки: '+transState.score;$('#transProgress').style.width=((transState.round-1)/8*100)+'%';$('#transZh').textContent=transState.task.zh;$('#transPy').textContent=transState.task.py;$('#transFeedback').className='feedback';$('#transFeedback').textContent='Выбери перевод.';let opts=shuffle([transState.task,...shuffle(translations.filter(x=>x.ru!==transState.task.ru)).slice(0,3)]);$('#transOptions').innerHTML='';opts.forEach(o=>{let b=document.createElement('button');b.className='option';b.textContent=o.ru;b.onclick=()=>{if(transState.locked)return;transState.locked=true;if(o.ru===transState.task.ru){b.classList.add('correct');transState.score++;$('#transFeedback').className='feedback ok';$('#transFeedback').textContent='✨ Точно! Ты понял(а) всю фразу.';sound('ok')}else{b.classList.add('wrong');$('#transFeedback').className='feedback no';$('#transFeedback').textContent='Не совсем. Верный перевод: '+transState.task.ru; sound('no');$$('#transOptions .option').forEach(x=>{if(x.textContent===transState.task.ru)x.classList.add('correct')})}$('#transScore').textContent='Очки: '+transState.score;$('#transProgress').style.width=(transState.round/8*100)+'%'};$('#transOptions').append(b)})}
+$('#nextTrans').onclick=()=>{if(transState.round>=8){$('#transFeedback').className='feedback ok';$('#transFeedback').textContent=`Готово! Результат: ${transState.score} из 8. Нажми «Начать заново», чтобы потренироваться ещё.`;sound('ok');return}transState.round++;newTrans()};$('#resetTrans').onclick=startTrans;$('#speakTrans').onclick=()=>speak(transState.task.zh);startTrans();
+</script>
+</body>
+</html>

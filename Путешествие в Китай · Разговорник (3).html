@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Путешествие в Китай · Разговорник</title>
+<style>
+:root{--sky1:#bfe6ff;--sky2:#ffe9d2;--ink:#1f2a44;--mut:#5d6b8a;--card:#ffffffe6;--line:#ffffff;--sh:0 8px 22px #2b4a7a22;--bld:#2d5c9a;--ok:#22a45d;--bad:#e5483a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sky1:#10244a;--sky2:#3a2748;--ink:#f1f4ff;--mut:#aab6d6;--card:#1d2a4de6;--line:#2c3c66;--sh:0 8px 22px #0006;--bld:#9fc2ff;--ok:#4cd68a;--bad:#ff7a6b}}
+:root[data-theme="dark"]{--sky1:#10244a;--sky2:#3a2748;--ink:#f1f4ff;--mut:#aab6d6;--card:#1d2a4de6;--line:#2c3c66;--sh:0 8px 22px #0006;--bld:#9fc2ff;--ok:#4cd68a;--bad:#ff7a6b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:"Nunito","Trebuchet MS","Segoe UI",system-ui,sans-serif;background:linear-gradient(180deg,var(--sky1),var(--sky2)) fixed}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sky1);z-index:10}
+.bg{position:fixed;left:0;right:0;bottom:0;height:52vh;z-index:0;pointer-events:none;color:var(--bld);opacity:.2}
+.bg svg{width:100%;height:100%}
+.w{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:16px 16px 70px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.ib{border:0;background:var(--card);color:var(--ink);border-radius:999px;padding:9px 15px;font:inherit;font-weight:700;cursor:pointer;box-shadow:var(--sh)}
+.hero{text-align:center;margin:10px 0 22px}
+.hero .big{font-size:58px;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+h1{font-size:clamp(28px,6vw,44px);margin:4px 0;font-weight:900}
+.sub{color:var(--mut);font-size:17px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tc{border:0;border-radius:24px;padding:18px;text-align:left;cursor:pointer;color:#fff;font:inherit;box-shadow:var(--sh);transition:transform .2s;position:relative;overflow:hidden}
+.tc:hover{transform:translateY(-5px) rotate(-.6deg)}
+.tc .e{font-size:44px}.tc h3{margin:6px 0 2px;font-size:20px}.tc small{opacity:.9}
+.tc .s{position:absolute;right:14px;top:14px;letter-spacing:2px;font-size:16px}
+.mix{display:block;width:100%;margin:16px 0 0;border:0;border-radius:24px;padding:18px;font:inherit;font-size:19px;font-weight:900;color:#fff;background:linear-gradient(90deg,#ff5e62,#ff9966);cursor:pointer;box-shadow:var(--sh)}
+.bk{background:var(--card);border:0;border-radius:999px;padding:8px 14px;font:inherit;font-weight:700;color:var(--ink);cursor:pointer;box-shadow:var(--sh);margin:6px 0 12px}
+.th{border-radius:26px;padding:18px 20px;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh)}
+.th .e{font-size:50px}.th h2{margin:0;font-size:26px}
+.ph{display:flex;align-items:center;gap:14px;background:var(--card);border-radius:20px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--sh);border-left:8px solid var(--c)}
+.ph .zh{font-size:30px;font-weight:800;line-height:1.2}
+.ph .py{color:var(--mut);font-size:15px}
+.ph .rd{display:inline-block;background:var(--c);color:#fff;border-radius:10px;padding:2px 10px;font-weight:800;margin:4px 0;font-size:16px}
+.ph .ru{font-size:17px}
+.ph>div{flex:1}
+.sp{border:0;background:var(--c);color:#fff;border-radius:50%;width:48px;height:48px;font-size:22px;cursor:pointer;flex:none;box-shadow:var(--sh)}
+.sp:active{transform:scale(.9)}
+.go{display:block;width:100%;margin-top:14px;border:0;border-radius:20px;padding:16px;font:inherit;font-size:19px;font-weight:900;color:#fff;background:var(--c);cursor:pointer;box-shadow:var(--sh)}
+.qc{background:var(--card);border-radius:26px;padding:22px;box-shadow:var(--sh);animation:pop .3s}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+.bar{height:12px;border-radius:9px;background:#0001;overflow:hidden;margin:8px 0 14px}.bar div{height:100%;background:var(--c);transition:width .3s}
+.qt{color:var(--mut);font-weight:700}
+.qz{font-size:clamp(30px,8vw,46px);font-weight:900;text-align:center;margin:14px 0 4px}
+.qp{text-align:center;color:var(--mut);margin-bottom:14px}
+.op{display:block;width:100%;text-align:left;margin:9px 0;border:3px solid var(--line);background:#ffffff10;color:var(--ink);border-radius:18px;padding:13px 16px;font:inherit;font-size:18px;font-weight:700;cursor:pointer}
+.op small{display:block;color:var(--mut);font-weight:600}
+.op.ok{border-color:var(--ok);background:#22a45d22}.op.no{border-color:var(--bad);background:#e5483a22}
+.fb{min-height:60px;margin-top:8px;font-weight:700}
+.nx{border:0;border-radius:16px;padding:12px 24px;font:inherit;font-weight:900;font-size:17px;color:#fff;background:var(--c);cursor:pointer;margin-top:8px}
+.res{text-align:center}.res .stt{font-size:60px;letter-spacing:6px;color:#ffb400}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Noto+Sans+SC:wght@700;900&display=swap">
+<style>
+:root{--g1:#7fcdfb;--g2:#ffe0b8;--g3:#ffb6c8;--far:#8fb4e0;--near:#3d6eb0;--glow:#fff1b8;--cloud:#fff;--wo:.35;--stk:#2b6cc4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g1:#0e1a4a;--g2:#4b2b6d;--g3:#d0577c;--far:#3b4b92;--near:#1a2257;--glow:#ffd98a;--cloud:#8a8fd0;--wo:.95;--stk:#0b1030}}
+:root[data-theme="dark"]{--g1:#0e1a4a;--g2:#4b2b6d;--g3:#d0577c;--far:#3b4b92;--near:#1a2257;--glow:#ffd98a;--cloud:#8a8fd0;--wo:.95;--stk:#0b1030}
+body{font-family:"Nunito","Trebuchet MS",system-ui,sans-serif;background:linear-gradient(180deg,var(--g1) 0%,var(--g2) 62%,var(--g3) 100%) fixed}
+.scene{position:fixed;left:0;right:0;bottom:0;height:78vh;z-index:0;pointer-events:none}.scene svg{width:100%;height:100%}
+.scene g{transition:transform .25s ease-out}
+.far{transform:translateX(calc(var(--mx,0)*-4px))}.mid{transform:translateX(calc(var(--mx,0)*-8px))}.near,#win{transform:translateX(calc(var(--mx,0)*-14px))}
+.far rect{fill:var(--far);opacity:.55}.near rect{fill:var(--near);opacity:.9}.mid{opacity:.9}
+#win rect{fill:var(--glow);opacity:var(--wo);animation:tw 4s ease-in-out infinite alternate}
+@keyframes tw{to{opacity:calc(var(--wo)*.35)}}
+.cl ellipse{fill:var(--cloud);opacity:.75}.c1{animation:dr 70s linear infinite alternate}.c2{animation:dr 90s linear infinite alternate-reverse}.c3{animation:dr 80s linear infinite alternate}
+@keyframes dr{to{transform:translateX(70px)}}
+.lan{animation:fl 5s ease-in-out infinite}.lan.b{animation-duration:7s;animation-delay:-2s}.lan.c{animation-duration:6s;animation-delay:-4s}
+@keyframes fl{50%{transform:translateY(-16px)}}
+.sh{animation:shim 4s ease-in-out infinite alternate}@keyframes shim{to{transform:translateX(24px);opacity:.2}}
+.hero h1{color:#fff;-webkit-text-stroke:8px var(--stk);paint-order:stroke fill;text-shadow:0 6px 0 #0002;letter-spacing:.5px}
+.sub{display:inline-block;background:#ffffffc4;color:#2a3b66;padding:6px 18px;border-radius:99px;box-shadow:0 4px 0 #0001;font-weight:800}
+.hero .big svg{width:130px;height:130px;filter:drop-shadow(0 12px 8px #0003)}
+.eye{transform-box:fill-box;transform-origin:center;animation:bl 4.5s infinite}@keyframes bl{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.tc{border-radius:32px;padding:20px;box-shadow:0 9px 0 #0003,0 20px 30px #1a3a7a40,inset 0 3px 0 #fff7,inset 0 -12px 20px #0002;animation:rise .55s both;transition:transform .2s,box-shadow .2s}
+.tc::after{content:"";position:absolute;left:7%;right:7%;top:6px;height:40%;border-radius:30px 30px 70% 70%;background:linear-gradient(#ffffff70,#fff0);pointer-events:none}
+.tc:hover{transform:translateY(-9px) scale(1.04) rotate(-1deg)}.tc:active{transform:translateY(3px);box-shadow:0 3px 0 #0003,0 8px 14px #1a3a7a40}
+.grid>:nth-child(3n+1){animation-delay:.04s}.grid>:nth-child(3n+2){animation-delay:.12s}.grid>:nth-child(3n){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.94)}}
+.tc .e,.th .e{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-size:40px;background:radial-gradient(circle at 30% 25%,#fff,#ffffff80 55%,#ffffff30);box-shadow:inset 0 -6px 10px #0002,0 6px 10px #0003;margin-bottom:6px}
+.tc .s{color:#fff3a0;text-shadow:0 2px 0 #0003}
+.mix,.go,.nx{border-radius:26px;box-shadow:0 8px 0 #0003,0 16px 24px #1a3a7a40,inset 0 3px 0 #fff6;transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+.mix:hover,.go:hover,.nx:hover{transform:translateY(-3px)}.mix:active,.go:active,.nx:active{transform:translateY(5px);box-shadow:0 3px 0 #0003}
+.mix::after{content:"";position:absolute;top:0;bottom:0;width:60px;left:-80px;background:linear-gradient(90deg,#fff0,#fff7,#fff0);transform:skewX(-20deg);animation:swp 3.5s infinite}@keyframes swp{to{left:110%}}
+.bk,.ib{box-shadow:0 5px 0 #0002,0 10px 16px #1a3a7a30,inset 0 2px 0 #fff9;transition:transform .15s}.bk:active,.ib:active{transform:translateY(3px)}
+.th{border-radius:32px;box-shadow:0 9px 0 #0003,0 20px 30px #1a3a7a40,inset 0 3px 0 #fff7;position:relative;overflow:hidden}
+.th h2{text-shadow:0 3px 0 #0003;font-size:28px}
+.ph{border-radius:28px;border-left:12px solid var(--c);box-shadow:0 7px 0 #0001,0 16px 26px #1a3a7a2e;transition:transform .2s;animation:rise .45s both}.ph:hover{transform:translateX(5px)}
+.ph .zh{font-family:"Noto Sans SC","Nunito",sans-serif;font-weight:900;font-size:34px}
+.ph .rd{background:linear-gradient(var(--c),color-mix(in srgb,var(--c) 70%,#000));box-shadow:0 3px 0 #0003,inset 0 2px 0 #fff4;font-weight:900}
+.sp{width:56px;height:56px;background:radial-gradient(circle at 30% 25%,#ffffffb0,#fff0 45%),var(--c);box-shadow:inset 0 -6px 9px #0003,0 6px 0 #0003,0 12px 16px #0003;transition:transform .15s}
+.sp:hover{transform:scale(1.12)}.sp:active{transform:translateY(4px);box-shadow:inset 0 -6px 9px #0003,0 2px 0 #0003}
+.qc{border-radius:34px;border:3px solid #ffffffaa;box-shadow:0 10px 0 #0001,0 24px 40px #1a3a7a40}
+.qz{font-family:"Noto Sans SC","Nunito",sans-serif;text-shadow:0 4px 0 #0001}
+.bar{height:18px;box-shadow:inset 0 3px 5px #0003;background:#0002}
+.bar div{background:repeating-linear-gradient(45deg,#ffffff40 0 10px,#fff0 10px 20px),linear-gradient(var(--c),color-mix(in srgb,var(--c) 70%,#000));border-radius:9px;box-shadow:inset 0 3px 0 #fff5}
+.op{border:0;border-radius:22px;background:var(--card);box-shadow:0 6px 0 #0002,0 12px 16px #1a3a7a22,inset 0 2px 0 #fff9;transition:transform .12s,box-shadow .12s}
+.op:hover:not(:disabled){transform:translateY(-3px)}.op:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 #0002}
+.op.ok{background:linear-gradient(#8ff0b4,#3ec978);color:#06361b;box-shadow:0 6px 0 #1f8a4d;animation:hop .4s}.op.ok small{color:#0a5a2f}
+.op.no{background:linear-gradient(#ffa89f,#ff6b5a);color:#4a0c06;box-shadow:0 6px 0 #c63b2d;animation:sk .4s}.op.no small{color:#7a1f14}
+@keyframes hop{40%{transform:translateY(-10px) scale(1.03)}}@keyframes sk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.cf{position:fixed;pointer-events:none;z-index:50;font-size:24px;animation:cf 1.1s ease-out forwards}
+@keyframes cf{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+.res .stt{text-shadow:0 5px 0 #0002;animation:hop .6s}
+.hero .big{display:flex;justify-content:center;align-items:flex-end;gap:2px}
+.duo{display:flex;align-items:flex-end;justify-content:flex-end;gap:2px;margin:-4px 0 6px}
+.duo svg{width:78px;height:78px;filter:drop-shadow(0 6px 5px #0002)}
+.duo.big2{justify-content:center}.duo.big2 svg{width:130px;height:130px}
+.bub{background:#fff;color:#2a3b66;border-radius:18px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 4px 0 #0001,0 8px 14px #0002;margin:0 8px 42px 0;position:relative;animation:pop .3s}
+.bub::after{content:"";position:absolute;right:-6px;bottom:8px;border:7px solid transparent;border-left-color:#fff;border-right:0}
+.th .mini{margin-left:auto;display:flex}.th .mini svg{width:78px;height:78px;margin-left:-10px;filter:drop-shadow(0 5px 4px #0003)}
+.ch-cheer{animation:jump .45s ease-in-out infinite alternate}.ch-think{animation:tilt 2.6s ease-in-out infinite}.ch-sad{transform:translateY(5px)}
+@keyframes jump{to{transform:translateY(-12px)}}@keyframes tilt{50%{transform:rotate(-6deg)}}
+.hand{transform-box:view-box;transform-origin:104px 112px;animation:wv .6s ease-in-out infinite alternate}@keyframes wv{to{transform:rotate(-18deg)}}
+#app.out{opacity:0;transform:translateY(12px) scale(.97);transition:.2s}
+#app.inl{animation:inl .45s both}#app.inr{animation:inr .45s both}#app.inu{animation:inu .4s both}
+@keyframes inl{from{opacity:0;transform:translateX(-50px)}}@keyframes inr{from{opacity:0;transform:translateX(50px)}}@keyframes inu{from{opacity:0;transform:translateY(30px) scale(.96)}}
+.wipe{position:fixed;inset:0;z-index:40;pointer-events:none;display:grid;place-items:center;font-size:90px;background:var(--wc,#ff7a59);animation:wp .8s ease-in-out both}
+.wipe span{animation:pp .8s ease-in-out both}
+@keyframes wp{0%{clip-path:circle(0% at 50% 60%)}40%,55%{clip-path:circle(150% at 50% 60%);opacity:1}100%{clip-path:circle(150% at 50% 60%);opacity:0}}
+@keyframes pp{0%{transform:scale(0) rotate(-40deg)}40%{transform:scale(1.3) rotate(8deg)}55%{transform:scale(1)}100%{transform:scale(2);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head>
+<body>
+<div class="scene" aria-hidden="true"><svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice"><defs><radialGradient id="sun"><stop offset="0" style="stop-color:var(--glow)"/><stop offset="1" style="stop-color:var(--glow);stop-opacity:0"/></radialGradient><radialGradient id="pb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffd1e3"/><stop offset=".45" stop-color="#ff6fa5"/><stop offset="1" stop-color="#b3205f"/></radialGradient><linearGradient id="tw" x1="0" x2="1"><stop offset="0" stop-color="#9be8ff"/><stop offset="1" stop-color="#3b7bd8"/></linearGradient><linearGradient id="wt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--near);stop-opacity:.1"/><stop offset="1" style="stop-color:var(--near);stop-opacity:.75"/></linearGradient></defs>
+<circle cx="880" cy="260" r="240" fill="url(#sun)"/>
+<g class="cl"><g class="c1"><ellipse cx="200" cy="110" rx="70" ry="22"/><ellipse cx="245" cy="95" rx="45" ry="22"/><ellipse cx="160" cy="98" rx="40" ry="18"/></g><g class="c2"><ellipse cx="760" cy="70" rx="80" ry="24"/><ellipse cx="810" cy="55" rx="50" ry="22"/></g><g class="c3"><ellipse cx="1040" cy="150" rx="60" ry="18"/><ellipse cx="1075" cy="138" rx="36" ry="16"/></g></g>
+<g class="far" id="far"></g>
+<g class="mid"><path d="M280 462L295 305h10l15 157z" fill="url(#tw)"/><rect x="296" y="150" width="8" height="160" fill="url(#tw)"/><circle cx="300" cy="300" r="34" fill="url(#pb)"/><circle cx="300" cy="205" r="22" fill="url(#pb)"/><circle cx="300" cy="150" r="11" fill="url(#pb)"/><rect x="299" y="70" width="2" height="82" fill="#6fa8e8"/><rect x="470" y="250" width="52" height="212" fill="url(#tw)"/><rect x="478" y="215" width="36" height="40" fill="url(#tw)"/><rect x="487" y="185" width="18" height="34" fill="url(#tw)"/><path d="M572 462L584 170Q600 60 616 170L628 462z" fill="url(#tw)"/><path d="M672 462V200L700 166 728 200V462z" fill="url(#tw)"/><ellipse cx="700" cy="222" rx="9" ry="15" style="fill:var(--g2)"/></g>
+<g class="near" id="near"></g><g id="win"></g>
+<rect x="0" y="456" width="1200" height="44" fill="url(#wt)"/><path class="sh" d="M60 476h80M300 486h120M600 473h90M900 483h140" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<g class="lan"><circle cx="150" cy="360" r="22" fill="#ff4d4d" opacity=".25"/><circle cx="150" cy="360" r="9" fill="#ff4d4d"/></g><g class="lan b"><circle cx="1050" cy="340" r="22" fill="#ffb400" opacity=".25"/><circle cx="1050" cy="340" r="9" fill="#ffb400"/></g><g class="lan c"><circle cx="560" cy="380" r="20" fill="#ff4d4d" opacity=".25"/><circle cx="560" cy="380" r="8" fill="#ff4d4d"/></g></svg></div>
+<div class="bg" style="display:none"><svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" fill="currentColor" aria-hidden="true">
+<rect x="40" y="290" width="50" height="110"/><rect x="100" y="250" width="44" height="150"/><rect x="152" y="300" width="60" height="100"/><rect x="222" y="270" width="46" height="130"/>
+<path d="M286 400L296 250h8l10 150z"/><circle cx="300" cy="250" r="30"/><rect x="297" y="100" width="6" height="150"/><circle cx="300" cy="160" r="20"/><circle cx="300" cy="100" r="9"/><rect x="299" y="30" width="2" height="70"/>
+<rect x="350" y="280" width="50" height="120"/><rect x="410" y="240" width="40" height="160"/>
+<rect x="470" y="170" width="50" height="230"/><rect x="478" y="140" width="34" height="30"/><rect x="487" y="115" width="16" height="25"/>
+<path d="M570 400L582 110Q600 14 618 110L630 400z"/>
+<path d="M672 400V135L700 100 728 135V400z"/>
+<rect x="745" y="230" width="46" height="170"/><rect x="800" y="270" width="60" height="130"/><rect x="870" y="200" width="40" height="200"/><rect x="920" y="260" width="56" height="140"/><rect x="986" y="220" width="44" height="180"/><rect x="1040" y="290" width="60" height="110"/><rect x="1110" y="250" width="50" height="150"/>
+<path d="M0 385q50-12 100 0t100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0V400H0z"/></svg></div>
+<div class="w" id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.19.6/dist/index.js"></script>
+<script>
+const T=[
+{e:"👋",t:"Привет и вежливость",c:"#ff7a59",p:["你好|ни хао|Здравствуйте! Привет!","谢谢|сесе|Спасибо","不客气|бу кэ-чи|Пожалуйста","对不起|дуэй бу чи|Извините","再见|цзай цзянь|До свидания","我叫萨沙|во цзяо Саша|Меня зовут Саша","我是俄罗斯人|во ши Э-лосы жэнь|Я русский"]},
+{e:"🍜",t:"Еда",c:"#f2a900",p:["我饿了|во э ле|Я хочу есть","我想吃饺子|во сян чи цзяоцзы|Хочу пельмени","我想喝水|во сян хэ шуэй|Хочу пить воды","不要辣|бу яо ла|Не острое, пожалуйста","很好吃|хэнь хао чи|Очень вкусно!","买单|май дань|Счёт, пожалуйста"]},
+{e:"🚇",t:"Дорога и метро",c:"#2d9cdb",p:["地铁站在哪儿|ди-те чжань цзай нар|Где станция метро?","厕所在哪儿|цэ-суо цзай нар|Где туалет?","我要去外滩|во яо чюй вай-тань|Мне нужно на набережную Бунд","往左走|ван цзо цзоу|Иди налево","往右走|ван ю цзоу|Иди направо","远吗|юань ма|Это далеко?"]},
+{e:"🛍️",t:"Магазин и деньги",c:"#9b51e0",p:["多少钱|до-шао цянь|Сколько стоит?","太贵了|тхай гуй ле|Слишком дорого","便宜一点儿|пянь-и и дяр|Подешевле, пожалуйста","我要这个|во яо чжэ-гэ|Мне вот это","我不要|во бу яо|Мне не нужно","可以用手机付钱吗|кэ-и юн шоу-цзи фу цянь ма|Можно заплатить телефоном?"]},
+{e:"🆘",t:"Нужна помощь",c:"#e5483a",p:["请帮帮我|цин бан бан во|Помогите мне, пожалуйста","我迷路了|во ми лу ле|Я заблудился","我不会说汉语|во бу хуэй шо хань-юй|Я не умею говорить по-китайски","请说慢一点儿|цин шо ман и дяр|Говорите помедленнее","我找不到妈妈|во чжао бу дао ма-ма|Я не могу найти маму","我的手机没电了|во дэ шоу-цзи мэй дянь ле|У моего телефона села батарея"]},
+{e:"🗼",t:"Шанхай: гуляем",c:"#1fb5a3",p:["我想看熊猫|во сян кань сюн-мао|Хочу посмотреть на панд","东方明珠真高|дун-фан мин-чжу чжэнь гао|Башня «Жемчужина Востока» такая высокая!","我想照相|во сян чжао-сян|Хочу сфотографироваться","这里真漂亮|чжэ-ли чжэнь пяо-лян|Здесь так красиво!","我喜欢上海|во си-хуань Шан-хай|Мне нравится Шанхай","我们去玩儿吧|во-мэнь чюй вар ба|Пойдём играть!"]},
+{e:"🔢",t:"Числа 1–10",c:"#4caf50",p:["一|и|1","二|эр|2","三|сань|3","四|сы|4","五|у|5","六|лю|6","七|ци|7","八|ба|8","九|цзю|9","十|ши|10"]},
+{e:"🏨",t:"Отель",c:"#c0392b",p:["我住在这个酒店|во чжу цзай чжэ-гэ цзю-дянь|Я живу в этом отеле","我的房间是五零三|во дэ фан-цзянь ши у лин сань|Моя комната — номер 503","有无线网吗|ю у-сянь ван ма|Здесь есть вайфай?","请给我一瓶水|цин гэй во и пин шуэй|Дайте мне бутылку воды","早饭几点|цзао-фань цзи дянь|Во сколько завтрак?","晚安|вань ань|Спокойной ночи"]},
+{e:"🎡",t:"Парк развлечений",c:"#e84393",p:["我想玩儿这个|во сян вар чжэ-гэ|Хочу покататься на этом","我们排队吧|во-мэнь пай дуй ба|Давай встанем в очередь","太好玩儿了|тхай хао вар ле|Это так весело!","我不怕|во бу па|Мне не страшно","我有点儿怕|во ю дяньр па|Мне немного страшно","再玩儿一次|цзай вар и цы|Ещё разок!"]},
+{e:"🕐",t:"Время и погода",c:"#0984e3",p:["现在几点|сянь-цзай цзи дянь|Который сейчас час?","今天|цзинь-тянь|Сегодня","明天|мин-тянь|Завтра","早上|цзао-шан|Утро","晚上|вань-шан|Вечер","今天很热|цзинь-тянь хэнь жэ|Сегодня жарко","下雨了|ся юй ле|Идёт дождь"]},
+{e:"👨‍👩‍👦",t:"Знакомство и семья",c:"#00b894",p:["你叫什么名字|ни цзяо шэнь-мэ мин-цзы|Как тебя зовут?","很高兴认识你|хэнь гао-син жэнь-ши ни|Приятно познакомиться","我十一岁|во ши-и суй|Мне 11 лет","这是我爸爸|чжэ ши во ба-ба|Это мой папа","这是我妈妈|чжэ ши во ма-ма|Это моя мама","我是学生|во ши сюэ-шэн|Я школьник","我喜欢足球|во си-хуань цзу-цю|Я люблю футбол"]},
+{e:"🤒",t:"Как я себя чувствую",c:"#d63031",p:["我很好|во хэнь хао|Я в порядке","我累了|во лэй ле|Я устал","我渴了|во кэ ле|Я хочу пить","我困了|во кунь ле|Я хочу спать","我肚子疼|во ду-цзы тэн|У меня болит живот","我头疼|во тоу тэн|У меня болит голова","我不舒服|во бу шу-фу|Мне нехорошо"]},
+{e:"🍦",t:"Напитки и сладости",c:"#fd79a8",p:["我想要冰淇淋|во сян яо бин-ци-линь|Хочу мороженое","我要一杯奶茶|во яо и бэй най-чха|Мне один чай с молоком","可乐|кэ-лэ|Кола","果汁|го-чжи|Сок","苹果|пин-го|Яблоко","西瓜|си-гуа|Арбуз","很甜|хэнь тянь|Очень сладкое"]},
+{e:"🎨",t:"Цвета",c:"#6c5ce7",p:["红色|хун-сэ|Красный","蓝色|лань-сэ|Синий","绿色|люй-сэ|Зелёный","黄色|хуан-сэ|Жёлтый","黑色|хэй-сэ|Чёрный","白色|бай-сэ|Белый","我喜欢红色|во си-хуань хун-сэ|Мне нравится красный"]},
+{e:"✈️",t:"Аэропорт и поезд",c:"#0abde3",p:["机场|цзи-чан|Аэропорт","火车站|хо-чэ чжань|Вокзал","高铁|гао-те|Скоростной поезд","护照|ху-чжао|Паспорт","我的票|во дэ пяо|Мой билет","我们出发吧|во-мэнь чу-фа ба|Отправляемся!"]}
+];
+const py=w=>{try{return pinyinPro.pinyin(w,{type:'string'})}catch(e){return ''}};
+T.forEach((t,i)=>t.p=t.p.map(s=>{let[zh,rd,ru]=s.split('|');return{zh,rd,ru,i}}));
+const ALL=T.flatMap(t=>t.p),$=s=>document.querySelector(s),app=$('#app');
+const shuf=a=>{let b=a.slice();for(let i=b.length-1;i>0;i--){let j=Math.random()*(i+1)|0;[b[i],b[j]]=[b[j],b[i]]}return b};
+let P={},Q={};try{P=JSON.parse(localStorage.getItem('cn11')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('cn11',JSON.stringify(P))}catch(e){}};
+const say=z=>{try{speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(z);u.lang='zh-CN';u.rate=.75;speechSynthesis.speak(u)}catch(e){}};
+const st=n=>'★'.repeat(n)+'☆'.repeat(3-n);
+function home(){
+app.innerHTML=`<div class="top"><span></span><button class="ib" id="th">◐</button></div><div class="hero"><div class="big"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><radialGradient id="pw" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#dfe7f2"/></radialGradient></defs><ellipse cx="70" cy="128" rx="40" ry="7" fill="#0003"/><ellipse cx="70" cy="108" rx="38" ry="28" fill="url(#pw)"/><ellipse cx="36" cy="108" rx="11" ry="18" fill="#2a2d3a"/><ellipse cx="104" cy="108" rx="11" ry="18" fill="#2a2d3a"/><path d="M44 90Q70 104 96 90L98 100Q70 116 42 100z" fill="#e5483a"/><circle cx="34" cy="26" r="15" fill="#2a2d3a"/><circle cx="106" cy="26" r="15" fill="#2a2d3a"/><circle cx="70" cy="62" r="45" fill="url(#pw)"/><ellipse cx="49" cy="62" rx="11" ry="15" transform="rotate(-20 49 62)" fill="#2a2d3a"/><ellipse cx="91" cy="62" rx="11" ry="15" transform="rotate(20 91 62)" fill="#2a2d3a"/><g class="eye"><circle cx="51" cy="60" r="6.5" fill="#fff"/><circle cx="89" cy="60" r="6.5" fill="#fff"/><circle cx="52" cy="61" r="4" fill="#1b1d28"/><circle cx="90" cy="61" r="4" fill="#1b1d28"/><circle cx="53.2" cy="59.5" r="1.6" fill="#fff"/><circle cx="91.2" cy="59.5" r="1.6" fill="#fff"/></g><ellipse cx="70" cy="77" rx="6.5" ry="4.5" fill="#2a2d3a"/><path d="M61 84Q70 94 79 84" stroke="#2a2d3a" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="36" cy="79" r="6" fill="#ff8fa8" opacity=".55"/><circle cx="104" cy="79" r="6" fill="#ff8fa8" opacity=".55"/></svg></div><h1>Путешествие в Китай</h1><p class="sub">Твой карманный разговорник для Шанхая · 你好, 上海!</p></div>
+<div class="grid">${T.map((t,i)=>`<button class="tc" data-i="${i}" style="background:linear-gradient(135deg,${t.c},${t.c}bb)"><span class="s">${st(P[i]||0)}</span><div class="e">${t.e}</div><h3>${t.t}</h3><small>${t.p.length} фраз</small></button>`).join('')}</div>
+<button class="mix" id="mx">🎮 Большая игра: все темы · 20 вопросов ${st(P.a||0)}</button>`;
+$('#th').onclick=()=>{let d=document.documentElement;d.dataset.theme=d.dataset.theme==='dark'?'light':'dark'};
+app.querySelectorAll('.tc').forEach(b=>b.onclick=()=>topic(+b.dataset.i));
+$('#mx').onclick=()=>quiz(ALL,'a','#ff5e62')}
+function topic(i){let t=T[i];
+app.innerHTML=`<button class="bk" id="bk">← Все темы</button><div class="th" style="background:linear-gradient(135deg,${t.c},${t.c}aa)"><span class="e">${t.e}</span><div><h2>${t.t}</h2><div>Нажми 🔊 и повтори вслух!</div></div></div>
+${t.p.map((p,k)=>`<div class="ph" style="--c:${t.c}"><button class="sp" data-k="${k}">🔊</button><div><div class="zh">${p.zh}</div><div class="py">${py(p.zh)}</div><span class="rd">читай: ${p.rd}</span><div class="ru">${p.ru}</div></div></div>`).join('')}
+<button class="go" id="gq" style="--c:${t.c}">✏️ Тренироваться</button>`;
+$('#bk').onclick=home;$('#gq').onclick=()=>quiz(t.p,i,t.c);
+app.querySelectorAll('.sp').forEach(b=>b.onclick=()=>say(t.p[+b.dataset.k].zh));window.scrollTo(0,0)}
+function quiz(list,key,c){Q={items:shuf(list).slice(0,key=='a'?20:8),n:0,sc:0,key,c,list};nq()}
+function nq(){let it=Q.items[Q.n],type=Q.n%2,
+d=shuf(ALL.filter(x=>x.zh!==it.zh&&x.ru!==it.ru)).slice(0,3),o=shuf([it,...d]);
+app.innerHTML=`<button class="bk" id="bk">← Выйти</button><div class="qc" style="--c:${Q.c}"><div class="qt">Вопрос ${Q.n+1} из ${Q.items.length} · ⭐ ${Q.sc}</div><div class="bar"><div style="width:${Q.n/Q.items.length*100}%"></div></div>${duo('think',['Хм…','Думаем!','Я знаю!'][Q.n%3])}
+${type?`<div class="qt">Как сказать по-китайски?</div><div class="qz" style="font-size:clamp(22px,6vw,32px)">${it.ru}</div>`:`<div class="qt">Что это значит?</div><div class="qz">${it.zh}</div><div class="qp">${py(it.zh)} <button class="ib" id="hr">🔊 Послушать</button></div>`}
+${o.map((x,k)=>`<button class="op" data-k="${k}">${type?`${x.zh}<small>${py(x.zh)}</small>`:x.ru}</button>`).join('')}<div class="fb" id="fb"></div></div>`;
+$('#bk').onclick=home;if(!type)$('#hr').onclick=()=>say(it.zh);
+app.querySelectorAll('.op').forEach(b=>b.onclick=()=>{let x=o[+b.dataset.k],good=x===it;
+app.querySelectorAll('.op').forEach((q,k)=>{q.disabled=true;if(o[k]===it)q.classList.add('ok')});
+if(good){Q.sc++;boom(b)}else b.classList.add('no');let dd=$('#duo');if(dd)dd.outerHTML=duo(good?'cheer':'sad',good?['Ура!','Молодец!','Супер!','Класс!'][Q.n%4]:'Ничего, бывает!');
+$('#fb').innerHTML=`${good?'✅ Верно! Молодец!':'❌ Почти! Правильно так:'}<br>${it.zh} (${py(it.zh)}) — читай: <b>${it.rd}</b> — ${it.ru}<br><button class="nx" id="nx">${Q.n<Q.items.length-1?'Дальше →':'Результат'}</button>`;
+say(it.zh);$('#nx').onclick=()=>{Q.n++;Q.n<Q.items.length?nq():fin()}})}
+function fin(){let L=Q.items.length,n=Q.sc>=L*.85?3:Q.sc>=L*.6?2:1;if(n>(P[Q.key]||0)){P[Q.key]=n;save()}
+app.innerHTML=`<div class="qc res" style="--c:${Q.c}"><div style="font-size:64px">${n===3?'🏆':n===2?'🎉':'💪'}</div><h1>${n===3?'Супер! 太棒了!':n===2?'Отлично! 不错!':'Хорошее начало! 加油!'}</h1><div class="stt">${st(n)}</div><p>Правильных ответов: ${Q.sc} из ${Q.items.length}</p><button class="nx" id="ag">Ещё раз</button> <button class="nx" id="hm" style="background:var(--mut)">К темам</button></div>`;
+$('#ag').onclick=()=>quiz(Q.list,Q.key,Q.c);$('#hm').onclick=home;boom(null,n*14)}
+function boom(el,n=12){let r=el?el.getBoundingClientRect():{left:innerWidth/2,top:innerHeight/3,width:0,height:0};for(let i=0;i<n;i++){let d=document.createElement('div');d.className='cf';d.textContent=['⭐','✨','🎉','🏮','🐼','💫'][i%6];d.style.left=r.left+r.width/2+'px';d.style.top=r.top+r.height/2+'px';d.style.setProperty('--dx',(Math.random()*320-160)+'px');d.style.setProperty('--dy',(Math.random()*-240-20)+'px');d.style.setProperty('--r',(Math.random()*360)+'deg');document.body.appendChild(d);setTimeout(()=>d.remove(),1200)}}
+(function(){const NS='http://www.w3.org/2000/svg',mk=(p,t,a)=>{let e=document.createElementNS(NS,t);for(let k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+let far=$('#far'),near=$('#near'),win=$('#win'),x=-10,s=7;const r=()=>(s=(s*9301+49297)%233280)/233280;
+while(x<1210){let w=40+r()*50|0,h=60+r()*130|0;mk(far,'rect',{x,y:400-h,width:w,height:h+62});x+=w+4}
+x=-10;while(x<1210){if(x>250&&x<740){x+=60;continue}let w=36+r()*44|0,h=40+r()*80|0;mk(near,'rect',{x,y:462-h,width:w,height:h});for(let wx=x+6;wx<x+w-8;wx+=12)for(let wy=462-h+8;wy<452;wy+=14)if(r()>.45)mk(win,'rect',{x:wx,y:wy,width:5,height:7,rx:1,style:'animation-delay:'+(r()*4).toFixed(1)+'s'});x+=w+3}
+addEventListener('pointermove',e=>document.documentElement.style.setProperty('--mx',((e.clientX/innerWidth-.5)*2).toFixed(2)));
+})();
+const xt=m=>m=='sad'?'':m=='cheer'?'<text x="108" y="26" font-size="18">✨</text><text x="12" y="30" font-size="14">⭐</text>':m=='think'?'<text x="106" y="26" font-size="22" font-weight="900" fill="#fff" stroke="#2b6cc4" stroke-width="1.2" paint-order="stroke">?</text>':'';
+function panda(m){const c=m=='cheer',s=m=='sad',t=m=='think',D='#2a2d3a',ex=t?3:1,ey=t?-2:1;
+return `<svg class="ch-${m}" viewBox="0 0 140 140" aria-hidden="true"><ellipse cx="70" cy="132" rx="40" ry="6" fill="#0003"/><ellipse cx="70" cy="108" rx="38" ry="28" fill="#fff"/><ellipse cx="70" cy="120" rx="30" ry="14" fill="#0000001a"/>${c?`<ellipse cx="24" cy="84" rx="9" ry="18" transform="rotate(28 24 84)" fill="${D}"/><ellipse cx="116" cy="84" rx="9" ry="18" transform="rotate(-28 116 84)" fill="${D}"/>`:`<ellipse cx="34" cy="110" rx="11" ry="18" fill="${D}"/><ellipse cx="106" cy="110" rx="11" ry="18" fill="${D}"/>`}<path d="M44 90Q70 104 96 90L98 100Q70 116 42 100z" fill="#e5483a"/><circle cx="34" cy="26" r="15" fill="${D}"/><circle cx="106" cy="26" r="15" fill="${D}"/><circle cx="70" cy="62" r="45" fill="#fff"/><path d="M30 78Q70 118 110 78Q108 104 70 107Q32 104 30 78z" fill="#00000012"/><ellipse cx="49" cy="62" rx="11" ry="15" transform="rotate(-20 49 62)" fill="${D}"/><ellipse cx="91" cy="62" rx="11" ry="15" transform="rotate(20 91 62)" fill="${D}"/>${c?`<path d="M43 61q8-10 16 0M81 61q8-10 16 0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>`:`<g class="eye"><circle cx="51" cy="60" r="7" fill="#fff"/><circle cx="89" cy="60" r="7" fill="#fff"/><circle cx="${51+ex}" cy="${60+ey}" r="4.2" fill="#1b1d28"/><circle cx="${89+ex}" cy="${60+ey}" r="4.2" fill="#1b1d28"/><circle cx="${52.2+ex}" cy="${58.5+ey}" r="1.6" fill="#fff"/><circle cx="${90.2+ex}" cy="${58.5+ey}" r="1.6" fill="#fff"/></g>`}${s?`<path d="M38 46l17-7M102 46l-17-7" stroke="${D}" stroke-width="3.5" stroke-linecap="round"/><path d="M100 72q-6 10 0 14q6-4 0-14z" fill="#6ec3ff"/>`:t?`<path d="M84 38q8-6 15-1" stroke="${D}" stroke-width="3.5" fill="none" stroke-linecap="round"/>`:''}<ellipse cx="70" cy="77" rx="6.5" ry="4.5" fill="${D}"/>${c?`<path d="M58 82Q70 104 82 82z" fill="${D}"/><path d="M63 93Q70 99 77 93Q70 89 63 93z" fill="#ff7a90"/>`:`<path d="${s?'M61 91Q70 82 79 91':t?'M63 86q7 3 14-1':'M61 84Q70 94 79 84'}" stroke="${D}" stroke-width="2.8" fill="none" stroke-linecap="round"/>`}<circle cx="36" cy="79" r="6" fill="#ff8fa8" opacity=".55"/><circle cx="104" cy="79" r="6" fill="#ff8fa8" opacity=".55"/>${xt(m)}</svg>`}
+function boy(m){const c=m=='cheer',s=m=='sad',t=m=='think',w=m=='wave',K='#ffd9b8',Y='#ffc83d',ex=t?1.6:0,ey=t?-1.6:0;
+const arm=(d,hx,hy)=>`<path d="${d}" stroke="${Y}" stroke-width="15" stroke-linecap="round" fill="none"/><circle cx="${hx}" cy="${hy}" r="9" fill="${K}"/>`;
+return `<svg class="ch-${m}" viewBox="0 0 140 140" aria-hidden="true"><ellipse cx="70" cy="135" rx="38" ry="5" fill="#0003"/><path d="M26 140Q28 104 70 104Q112 104 114 140z" fill="${Y}"/><path d="M48 106l-3 34M92 106l3 34" stroke="#2b4a8f" stroke-width="6"/>${c?arm('M38 116Q16 100 22 68',22,60)+arm('M102 116Q124 100 118 68',118,60):w?'<g class="hand">'+arm('M104 116Q128 104 122 78',122,70)+'</g>':''}<rect x="60" y="92" width="20" height="16" fill="#f2c09a"/><path d="M56 104Q70 118 84 104z" fill="${K}"/><circle cx="30" cy="68" r="8" fill="${K}"/><circle cx="110" cy="68" r="8" fill="${K}"/><circle cx="70" cy="64" r="40" fill="${K}"/><path d="M29 66Q24 14 70 16Q116 14 111 66Q108 42 88 36Q80 46 66 40Q46 40 40 52Q32 54 29 66z" fill="#b58a5b"/><path d="M60 18Q66 2 80 14Q72 14 70 22z" fill="#b58a5b"/><path d="M46 32Q58 22 74 25" stroke="#d9b07c" stroke-width="4" fill="none" stroke-linecap="round"/>${c?`<path d="M46 70q7-9 14 0M80 70q7-9 14 0" stroke="#5a3b20" stroke-width="3.5" fill="none" stroke-linecap="round"/>`:`<g class="eye"><ellipse cx="53" cy="70" rx="8" ry="9" fill="#fff"/><ellipse cx="87" cy="70" rx="8" ry="9" fill="#fff"/><circle cx="${53+ex}" cy="${70+ey}" r="5.4" fill="#3d8fe6" stroke="#2a6fc0"/><circle cx="${87+ex}" cy="${70+ey}" r="5.4" fill="#3d8fe6" stroke="#2a6fc0"/><circle cx="${53+ex}" cy="${70+ey}" r="2.6" fill="#12233f"/><circle cx="${87+ex}" cy="${70+ey}" r="2.6" fill="#12233f"/><circle cx="${54.6+ex}" cy="${68+ey}" r="1.7" fill="#fff"/><circle cx="${88.6+ex}" cy="${68+ey}" r="1.7" fill="#fff"/></g>`}<path d="${s?'M44 60l17-7M96 60l-17-7':c?'M45 52q8-6 16 0M79 52q8-6 16 0':t?'M45 56q8-5 16 0M79 50q8-7 16-1':'M45 56q8-5 16 0M79 56q8-5 16 0'}" stroke="#8a6338" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M68 80q2 4 5 1" stroke="#e0a07e" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="42" cy="84" r="6" fill="#ff9e9e" opacity=".4"/><circle cx="98" cy="84" r="6" fill="#ff9e9e" opacity=".4"/><circle cx="47" cy="82" r="1.2" fill="#d9976e"/><circle cx="52" cy="85" r="1.2" fill="#d9976e"/><circle cx="93" cy="82" r="1.2" fill="#d9976e"/><circle cx="88" cy="85" r="1.2" fill="#d9976e"/>${c?`<path d="M58 90Q70 110 82 90z" fill="#8a2f2f"/><path d="M63 100Q70 106 77 100Q70 97 63 100z" fill="#ff7a90"/>`:`<path d="${s?'M61 99Q70 90 79 99':t?'M63 96q7 3 14-1':'M60 92Q70 102 80 92'}" stroke="#b5554a" stroke-width="3" fill="none" stroke-linecap="round"/>`}${s?'<path d="M94 86q-5 9 0 12q5-3 0-12z" fill="#6ec3ff"/>':''}${xt(m)}</svg>`}
+function duo(m,tx){return '<div class="duo" id="duo"><div class="bub">'+tx+'</div>'+boy(m)+panda(m)+'</div>'}
+function decor(){let b=$('.hero .big');if(b)b.innerHTML=boy('wave')+panda('happy');let th=$('.th');if(th&&!th.querySelector('.mini'))th.insertAdjacentHTML('beforeend','<div class="mini">'+boy('happy')+panda('happy')+'</div>');let rs=$('.res');if(rs&&!rs.querySelector('.duo')){let L=Q.items.length,m=Q.sc>=L*.85?'cheer':Q.sc>=L*.6?'happy':'think';rs.insertAdjacentHTML('afterbegin','<div class="duo big2">'+boy(m)+panda(m)+'</div>')}}
+function wrapBig(o,emo,col,dir){return function(...a){if(app.dataset.busy){o.apply(this,a);decor();return}app.dataset.busy=1;let w=document.createElement('div');w.className='wipe';w.style.setProperty('--wc',typeof col=='function'?col(a):col);w.innerHTML='<span>'+(typeof emo=='function'?emo(a):emo)+'</span>';document.body.appendChild(w);setTimeout(()=>{o.apply(this,a);decor();app.className='w in'+dir;window.scrollTo(0,0)},320);setTimeout(()=>{w.remove();app.className='w';delete app.dataset.busy},820)}}
+function wrapSm(o){return function(...a){if(app.dataset.busy){o.apply(this,a);decor();return}app.dataset.busy=1;app.classList.add('out');setTimeout(()=>{o.apply(this,a);decor();app.className='w inu'},200);setTimeout(()=>{app.className='w';delete app.dataset.busy},620)}}
+home();decor();
+home=wrapBig(home,'🐼','#2d9cdb','l');topic=wrapBig(topic,a=>T[a[0]].e,a=>T[a[0]].c,'r');quiz=wrapBig(quiz,'✏️',a=>a[2],'r');fin=wrapBig(fin,'🎉','#ffb400','r');nq=wrapSm(nq);
+</script></body></html>
